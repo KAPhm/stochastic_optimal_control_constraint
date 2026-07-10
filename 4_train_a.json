@@ -1,0 +1,31 @@
+{
+    "n_hidden_layers" : 7,
+    "n_neuron" : 128,
+    "n_time_freqs" : 8,
+    "norm_type" : "identity",
+    "hidden_activation_type" : "Swish",
+    "output_activation_type" : "Tanh",
+
+    "n_samples" : 25000,
+    "batch_size" : 5000,
+    "n_epoch" : 10000,
+
+    "penalty_weight" : 100.0,
+    "constraint_sample_range" : 20.0, 
+    "martingale_control_limit" : 20.0,
+
+    "lr" : 0.004,
+    "weight_decay" : 1e-07,
+    "milestones" :  [500, 1500, 2500, 3500, 4500, 5500, 6500, 7500, 8500, 9500],
+    "gamma_step": 0.5,
+    "gamma_expo": 0.9996,
+
+    "id_resample_initial_state": true,
+    "id_resample_brownian": true,
+    "id_validate_sample": true,
+
+    "id_breach_stats" : false,
+
+    "checkpoint_path": null
+}
+

@@ -1,0 +1,28 @@
+{
+    "n_hidden_layers" : 7,
+    "n_neuron" : 50,
+    "n_time_freqs" : 7,
+    "norm_type" : "batch",
+    "hidden_activation_type" : "GELU",
+    
+    "n_samples" : 100,
+    "batch_size" : 50, 
+    "n_epoch" : 20,
+
+    "lambda_start" : 0.0,
+    "lambda_end" : 0.5,
+    "lambda_end_epoch" : 18,
+    "lambda_update_interval" :  6,
+
+    "lr" : 0.005, 
+    "weight_decay" : 1e-4, 
+    "milestones" : [5, 10, 50, 100, 150, 200, 250, 500, 1000, 1500, 2000, 2500, 2750],
+    "gamma_step": 0.5,
+    "gamma_expo": 0.9966,
+
+    "id_resample_initial_state": false,
+    "id_resample_brownian": false,
+    "id_validate_sample" : true, 
+
+    "checkpoint_path": null
+}

@@ -1,0 +1,29 @@
+{
+	"n_hidden_layers" : 6,
+	"n_neuron" : 128,
+	"n_time_freqs" : 8,
+	"norm_type" : "identity",
+	"hidden_activation_type" : "Swish",
+	
+	"n_samples" : 5000,
+       	"batch_size" : 250,	
+	"n_epoch" : 6000,
+
+	"lambda_start" : 0.0,
+	"lambda_end" : 0.5, 
+	"lambda_end_epoch" : 5000,
+	"lambda_update_interval" : 500,
+
+	"lr" : 0.002,
+	"weight_decay" : 1e-7,
+	"milestones" : [1000, 2000, 3000, 4000, 5000, 6000, 6500, 7000, 7500, 8000, 8500, 9000, 9500],
+       	"gamma_step" : 0.6, 
+	"gamma_expo" : 0.9996, 
+	
+	"id_resample_initial_state" : true, 
+	"id_resample_brownian" : true, 
+	"id_validate_sample" : true, 
+
+	"checkpoint_path" : null
+}	
+

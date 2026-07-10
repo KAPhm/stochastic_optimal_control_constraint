@@ -1,0 +1,51 @@
+{
+    "comment" : "this file contains all parameters concerning the portfolio model, including the interval to sample the initial portfolio state from.",
+    "model_param": {
+        "n_asset" : 1,
+        "n_period" : 256, 
+        "T" : 1.0, 
+        
+        "interest_rate" : 0.03, 
+        "structural_lapse_rate" : 0.05, 
+        "dynamic_lapse_coeff": 0.5,
+
+        "mu_price" : [0.15, 0.10], 
+        "sigma_price" : [0.25, 0.16],
+        "corr_price" : [[1.0, 0.0],
+                        [0.0, 1.0]],
+        "book_value" : [200.0, 100.0],
+    
+        "utility_max" : 1e10,
+        "utility_min" : -1e10, 
+        "utility_coeff" : 0.25,
+
+        "trading_intensity_max": [250.0, 250.0],
+        "trading_intensity_min": [-250.0, -250.0],
+        "profit_sharing_max": 1.00,
+        "profit_sharing_min": 0.85,
+        
+        "id_scaling": true,
+        "id_noise" : false, 
+        "id_update_book_value": false,
+        "id_book_value_fixed" : true,
+        "id_approx_neg_part": true,
+
+        "epsilon": 1e-10, 
+        "terminal_min": -1e10, 
+        "terminal_max": 1e10
+
+    },
+    "sampling_param": {
+        "price" : [ [150.0, 250.0],
+                    [75.0, 125.0]],
+        "quantity": [[1000.0, 2000.0],[1200.0, 2400.0]],
+        "cash_ratio" : [0.10, 0.40],
+        "liability_ratio" : [0.6, 0.8]
+    },
+    "scaling_param": {
+        "price" : 1e-3,
+        "quantity" : 1e-3,
+        "cash_ratio" : 1.0,
+        "liability_ratio" : 1.0     
+    }
+}
