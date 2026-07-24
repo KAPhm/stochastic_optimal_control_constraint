@@ -745,7 +745,7 @@ def simulate_aug_trajectories(
             u_t, a_t = aug_control_NN(current_t, current_X, current_P)          # dim(u_t) = (sample_size, dim_control) and dim(a_t) = (sample_size, dim_sto)
             dW_t = brownians[:, :, i].to(device)                                # dim = (sample_size, dim_sto)
 
-            current_t, current_X, current_P = update_aug_state(t = current_t, X = current_X, M = current_P,
+            current_t, current_X, current_P = update_aug_state(t = current_t, X = current_X, P = current_P,
                                                     u = u_t, a = a_t, dW = dW_t, param_dict = param_dict, 
                                                     device = device, book_value = book_value)
             
